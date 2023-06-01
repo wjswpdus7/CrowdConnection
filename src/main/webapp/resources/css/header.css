@@ -1,0 +1,152 @@
+header {
+	border-bottom: 1px solid #e4e4e4;
+}
+header ul li {
+    list-style: none;
+}
+
+header a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.header_wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.header_top {
+    margin-bottom: 20px;
+}
+
+.header_top div {
+    display: inline-block;
+}
+
+.header_top img {
+    width: 100px;
+}
+
+.header_top a:not(:first-child) {
+    float:right;
+    font-size: 1.4rem;
+    font-weight:700;
+    color: #5e5d5d;
+} 
+
+.header_top #sign_up, #sign_in, #my_page {
+    margin: 20px 20px;
+}
+
+.header_top #sign_up:hover, #sign_in:hover {
+    color:#141414;
+}
+
+.header_top #new_iv {
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: 1px solid;
+    border-radius: 4px;
+    transition-property: background-color, color;
+    transition-duration: 0.2s;
+}
+
+.header_top #new_iv:hover {
+    background-color: #9e9d9d;
+    color: #fff;
+}
+
+.gnb {
+    display: inline-block;
+    background-color: #fff;
+    width:100%;
+}
+
+
+.gnb > div {
+  display: inline-block;
+}
+
+.gnb_button a:not(:first-child) {
+    padding:10px 10px;
+    font-size: 1.7rem;   
+    font-weight: 600;
+    margin: 0 50px;
+}
+
+.gnb_button a:first-child {
+    padding:10px 5px 10px 5px;
+    font-size: 1.7rem;   
+    font-weight: 600;
+    margin-right: 50px;
+}
+
+
+.gnb_button a:hover {
+    border-bottom:2px solid;
+}
+
+.search_box {
+    width: 300px;
+    float: right;
+    border: 1px solid #bbb;
+    border-radius: 8px;
+    padding: 10px 12px;
+    margin-bottom: 10px;
+}
+
+.search_box input:focus::placeholder {
+    color:transparent;
+}
+
+.search_box input{
+    width: 90%;
+    font-size: 14px;
+    border:none;
+    outline:none;
+}
+
+.search_box img {
+    width: 17px;
+    top: 10px;
+    right: 1px;
+    margin: 0;
+}
+
+
+.dropdown-content{
+  display : none;
+  position : absolute;
+  z-index : 1; /*다른 요소들보다 앞에 배치*/
+ 
+}
+
+.dropdown-content a{
+  display : block;
+  padding: 10px 10px;
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin: 0 50px;
+  
+   
+}
+
+a.dropbtn {
+    padding: 10px 10px;
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin: 0 50px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  
+}
+
+.user_name {
+	float:right;
+    font-size: 1.4rem;
+    color: #5e5d5d;
+    margin: 20px 20px;
+    margin-right:0;
+}

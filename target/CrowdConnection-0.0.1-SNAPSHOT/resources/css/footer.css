@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+.footer {
+    padding: 30px 0;
+	background : #292929;
+	width: 100%;
+	 position: relative; display: inline;
+}
+.footer span {
+	color: #ffffff;
+}
+.footer li {
+    position: relative; display: inline; padding: 0 80px; color: #ffffff;
+    font-size: 28px;
+}
+
+.footer li::before {
+    content: ''; width: 1px; height: 10px; background-color: #ffffff;
+    left: 0; top: 2px; 
+}
+
+.footer li:first-child::before {
+    width: 0; 
+}
+.c2{
+	text-align: center;
+}
+
+

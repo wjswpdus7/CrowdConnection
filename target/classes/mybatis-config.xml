@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "https://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<settings>
+		<setting name="mapUnderscoreToCamelCase" value="true"/>
+	</settings>
+	<typeAliases>
+			<typeAlias type="kr.ac.kopo.model.Member" alias="Member"/>
+			<typeAlias type="kr.ac.kopo.model.SignPath" alias="Sign"/>
+			<typeAlias type="kr.ac.kopo.model.Write" alias="Write"/>
+			<typeAlias type="kr.ac.kopo.model.WriteAttachThumbnail2" alias="WriteAttachThumbnail2"/>
+			<typeAlias type="kr.ac.kopo.model.InvestAttach" alias="InvestAttach"/>
+			<typeAlias type="kr.ac.kopo.model.InvestAttachSummer" alias="InvestAttachSummer"/>
+			<typeAlias type="kr.ac.kopo.model.Notice" alias="Notice"/>
+			<typeAlias type="kr.ac.kopo.model.Attach" alias="Attach"/>
+			<typeAlias type="kr.ac.kopo.model.Survey" alias="Survey"/>
+			
+	</typeAliases>
+	
+	<mappers>
+			<mapper resource="mybatis/member.xml"/>
+			<mapper resource="mybatis/sign.xml"/>
+			<mapper resource="mybatis/write.xml"/>
+			<mapper resource="mybatis/WriteAttachThumbnail2.xml"/>
+			<mapper resource="mybatis/investAttach.xml"/>
+			<mapper resource="mybatis/investSummer.xml"/>
+			<mapper resource="mybatis/notice.xml"/>
+			<mapper resource="mybatis/attach.xml"/>
+			<mapper resource="mybatis/survey.xml"/>
+	</mappers>
+</configuration>

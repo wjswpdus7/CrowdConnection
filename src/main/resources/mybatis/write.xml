@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="write">
+	
+	<insert id="add">
+	call write_pro (#{title},#{subTitle},#{goolMoney},#{tick},#{endDate},#{homepage},#{contents},#{id},#{report})
+	</insert>
+	
+	
+	<select id="list" resultType="Write" >
+		
+			select w.title,w.gool_money,end_date-trunc(sysdate) from write w join fact_table f on(w.id=f.wri_num) join member m on(m.num=f.mem_num)
+
+	</select>
+	
+	
+		<select id="list2" resultType="Write" >
+		
+			select * from write where category = 1
+
+	</select>
+	
+	<select id="item" resultType="Write">
+		select * from write where id=#{id}
+	</select>
+	
+	
+</mapper>

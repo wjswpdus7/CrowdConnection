@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+.footer {
+    padding: 30px 0;
+    background:#f5f5dc;
+	margin-top: 60px; 
+}
+
+.footer li {
+    position: relative; display: inline; padding: 0 7px;
+}
+
+.footer li::before {
+    content: ''; width: 1px; height: 10px; background-color: black;
+    position: absolute; left: 0; top: 2px; 
+}
+
+.footer li:first-child::before {
+    width: 0; 
+}
+.c2{
+	text-align: center;
+}
+
+

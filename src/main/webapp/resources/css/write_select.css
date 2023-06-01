@@ -1,0 +1,115 @@
+.wt_wrap a {
+    text-decoration: none;
+    color: inherit;
+}
+
+* {
+    font-size: 10px;
+}
+
+body {
+    margin:0;
+}
+
+p {
+    margin: 0;
+}
+
+.wt_title {
+    height:297px;
+    background-color: aliceblue;
+}
+
+.wt_text {
+    padding-top: 150px;
+    padding-left: 300px;
+}
+
+.wt_text p {
+    font-size: 4rem;
+    font-weight: 300;
+}
+
+.wt_text span {
+    font-size: 2rem;
+    font-weight: 200;
+}
+
+.select_wrap {
+	height: 535px;
+	display: flex;
+    margin: 0 auto;
+    padding: 30px 428px;
+}
+
+.iv_wt, .pt_wt {
+    height:250px;
+    margin:0 auto;
+}
+
+
+.wt_float {
+	display: inline-block;
+	margin: 0 auto;
+	width: 300px;
+	height: 400px;
+	border: 1px solid #bbb;
+	border-radius: 20px;
+	text-align: center;
+	transition-property: box-shadow;
+	transition-duration: 0.2s;
+}
+
+.wt_float:hover {
+	box-shadow:0px 0px 8px 4px #bbb;
+}
+
+.iv_float_img {
+	background-image: url("/resources/img/investment.png");
+	margin: 15px auto;
+	width : 150px;
+	height: 150px;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.pt_float_img {
+	background-image: url("/resources/img/handshake.png");
+	margin: 0 auto;
+	width : 180px;
+	height: 180px;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.select_wrap p {
+	font-size: 20px;
+	width: 98px;
+    margin: 0 auto;
+}
+
+.select_wrap ul {
+	width: 239px;
+	margin:0 auto;
+	margin-top: 15px;
+	margin-bottom: 50px;
+}
+
+.select_wrap li {
+	font-size: 12px;
+	color: #5d5d5e;
+	text-align: start;
+	line-height: 2;
+}
+
+.select_wrap a {
+	color: #5e5d5d;
+	width: 70px;
+	font-size: 14px;
+	padding: 7px 30px;
+	border: 2px solid;
+	border-radius: 5px;
+	margin: 0 auto;
+	
+}
+

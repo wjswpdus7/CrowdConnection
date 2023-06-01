@@ -1,0 +1,251 @@
+* {
+    font-size: 14px;
+}
+
+body {
+    margin: 0;
+}
+
+.write_wrap input {
+    color: #5e5d5d;
+}
+
+.process_nav li {
+    list-style: none;
+}
+
+.background {
+    background-color: #e6e6e6;
+}
+
+ul.tabs li{
+    cursor: pointer;
+  }
+
+.tabs .current {
+    background-color: #03134a;
+    color: #fff;
+}
+
+.tab-content{
+    display: none;
+}
+  
+.tab-content.current{
+    display: inherit;
+}
+
+.page_wrap {
+    width:1200px;
+    margin:0 auto;
+    background-color: #fff;
+    padding-top:30px;
+    
+}
+
+.write_wrap {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.process_nav {
+    height: 40px;
+}
+
+.process_nav ul {
+    height: 100%;
+    width:1000px;
+    margin: 0 auto;
+    display: flex;
+    padding:0;
+    text-align: center;
+}
+
+.process_nav ul li {
+    font-size: 12px;
+    font-weight: 500;
+    flex: 4; 
+    border: 1px solid #000;
+    border-right: 1px solid #ffffff00;
+    line-height:3;
+}
+
+.process_nav ul li:last-child {
+    border-right: 1px solid #000;
+
+}
+
+#tab_top h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+#tab_top p {
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: #5e5d5d;
+}
+
+.write_wrap p {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+#must_wt {
+    margin:20px 0;
+}
+
+#must_wt p::after {
+    content: "*";
+    vertical-align: middle;
+}
+
+.title_wrap input {
+    width: 578px;
+    height: 3rem;
+    font-size: 1.6rem;
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    outline: none;
+}
+
+.title_wrap input::placeholder {
+    font-size: 1.6rem;
+}
+
+.preview, .thumbnail_info{
+    display: inline-block;
+}
+
+.preview {
+    width: 324px;
+    height: 183px;
+    border: 1px solid #bbb;
+    border-radius: 10px;
+    text-align: center;
+    overflow:hidden;
+}
+
+.preview img {
+    width:100%;
+    height:100%;
+    object-fit: contain;
+}
+
+.thumbnail_info ul {
+    margin: 0;
+}
+
+.thumbnail_info ul li {
+    font-size: 1.4rem;
+    color: #5e5d5d;
+    line-height: 2.5;
+}
+
+.thumbnail_info {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.thumnail_select {
+    display: flex;
+}
+
+.thumbnail_input {
+    margin-left: 20px
+}
+
+.thumbnail_input label {
+    display: inline-block;
+    padding: .5em .75em;
+    color: #5e5d5d;
+    font-size: inherit;
+    line-height: normal;
+    vertical-align: middle;
+    background-color: #fdfdfd;
+    cursor: pointer;
+    border: 1px solid #bbb;
+    border-bottom-color: #bbb;
+    border-radius: .25em;
+}
+
+.thumbnail_input input[type="file"] {  
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip:rect(0,0,0,0);
+    border: 0;
+}
+
+.price_wrap input {
+    width: 200px;
+    position: relative;
+    height: 3rem;
+    font-size: 1.6rem;
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    outline: none;
+    color: #5e5d5d;
+}
+
+.price_wrap input::after {
+    content: "원";
+}
+
+.price_wrap label {
+    font-size: 1.3rem;
+    line-height: 2.5;
+}
+
+.price_wrap div {
+    width: 35%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.date_wrap input {
+    position: relative;
+    font-size: 1.4rem;
+    padding-left:5px; 
+    color: #5e5d5d;
+    border: 1px solid #bbb;
+    width: 250px;
+    height: 34px;
+    border-radius: 4px;
+    outline: 0;
+}
+input[type="date"]::-webkit-clear-button,
+input[type="date"]::-webkit-inner-spin-button { display: none;}
+input[type="date"]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    color:transparent;
+    cursor: pointer;
+}
+
+.date_wrap input::after {
+    content: "까지";
+    padding-right: 5px;
+}
+
+.contents_wrap {
+    margin-top:80px;
+}
+
+#tab-3 input{
+    width: 200px;
+    height: 3rem;
+    font-size: 1.6rem;
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    outline: none;
+}

@@ -1,0 +1,65 @@
+@charset "UTF-8";
+.modal_wrap{
+        display: none;
+        width: 420px;
+        height: 200px;
+        position: absolute;
+        top:50%;
+        left: 50%;
+        margin: -250px 0 0 -250px;
+        background:white;
+        z-index: 2;
+    }
+    .black_bg{
+        display: none;
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color:rgba(0, 0,0, 0.5);
+        top:0;
+        left: 0;
+        z-index: 1;
+    }
+    
+    .close_button{
+    	position: absolute;
+   		 top: 78%;
+   		 left: 83%;
+     	 border:0px;
+         font-size:18px;
+         font-weight: 600;
+         background-color:white;
+         color:#102b88;
+        
+    }
+   
+    .modal_close> a{
+        display: block;
+        width: 100%;
+        height: 100%;
+        background:url(https://img.icons8.com/metro/26/000000/close-window.png);
+        text-indent: -9999px;
+    }
+	.modal_title{
+		font-weight:bold;
+		color:#102b88;
+		text-align:center;
+		margin:20px;
+	}
+	.modal_main_text{
+		font-size:14px;
+		font-weight:500;
+		margin-left:40px;
+		
+		
+	}
+	
+	.modal_sub_text{
+		font-size:16px;
+		
+	}
+	
+	#modal_main{
+		margin:0 auto;
+	}

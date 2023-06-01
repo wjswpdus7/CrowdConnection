@@ -1,0 +1,207 @@
+html {
+	font-size: 10px;
+}
+
+body {
+    margin: 0;
+}
+
+.list_wrap a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.background {
+    background-color: #e6e6e6;
+}
+
+
+.list_bg {
+    height:297px;
+    width:100%;
+    background-image: url("/resources/img/invest_background.jpg");
+    background-size: cover;
+}
+
+.list_bg .bg_text{
+    margin: 0 auto;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    top: 60%;
+}
+
+.list_bg .bg_text strong{
+    font-size:3rem;
+}
+
+.list_bg .bg_text p{
+    font-size:1.6rem;
+}
+
+.list_wrap {
+    width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding-top:50px;
+}
+
+.list_wrap ul li {
+	list-style: none;	
+}
+
+.category {
+    font-size: 1.4rem;
+    width: 87%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.category div {
+    display: inline-block;
+}
+
+.type ul {
+    padding-left:0px;
+}
+
+.type ul li {
+    display:inline-block;
+    margin-right:20px;
+    cursor: pointer;
+}
+
+#hidden_search {
+    display: none;
+    width: 87%;
+    margin: 0px auto 20px;
+}
+
+.sort {
+    float: right;
+}
+
+.sort ul {
+    padding-left: 0;
+}
+
+.sort ul li {
+    cursor: pointer;
+    margin-left: 20px;
+    display: inline-block;
+
+}
+
+.list_contents {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.list_contents > div {
+    width: 30%;
+    margin: 0 15px 40px;
+}
+
+
+.thumbnail a img{
+    width: 100%;    
+}
+
+.open_item .title span{
+    padding: 4px 8px;
+    background-color: rgb(74, 153, 243);
+    border-radius: 5px;
+    color: #fff;
+    vertical-align: middle;
+}
+
+.ended_item .title span{
+    padding: 4px 13px;
+    background-color: rgb(224, 0, 0);
+    border-radius: 5px;
+    color: #fff;
+    vertical-align: middle;
+}
+
+.done_item .title span{
+    padding: 4px 13px;
+    background-color: rgb(19, 201, 13);
+    border-radius: 5px;
+    color: #fff;
+    vertical-align: middle;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.title div {
+     display:inline-block;
+
+}
+
+.title div:first-child {
+    vertical-align: top;
+    margin-top: 3px;
+}
+
+.title div:last-child {
+    width:85%;
+    float:right;
+}
+
+
+
+
+.title a strong{
+    font-size: 1.4rem;
+    vertical-align: middle;
+    color: #000000;
+    width:100%;
+}
+
+.ended_item .title a strong{
+    color: #999999;
+}
+
+
+.information {
+    display: flex;
+    flex-direction: column;
+    min-height: 40%;
+    justify-content: space-between;
+}
+
+.iv_count {
+    display: flex;
+    justify-content: space-between;
+}
+
+.iv_count :first-child {
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: #2151ff;
+}
+
+.iv_count :last-child {
+    font-size: 1.3rem;
+    color: #555555;
+}
+
+.iv_date p {
+    margin:0;
+    margin-bottom:10px;
+    font-size: 1.2rem;
+}
+
+.thumbnail {
+    width: 324px;
+    height: 183px;
+    border-radius: 10px;
+    overflow:hidden;
+}

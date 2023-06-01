@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+    .header {
+        height: 120px;
+    }
+    .logo {
+        display: flex;
+        margin: 0 auto;
+        width: 90%;
+        height: 60%;
+        justify-content: space-between;
+    }
+    .logo a {
+        text-decoration: none;
+    }
+    .gnb {
+        display: flex;
+        margin: 0 auto;
+        align-items: center;
+        width: 80%;
+        height: 40%;
+    }
+
+    .nav_bar ul {
+        display: flex;
+        list-style: none;
+        margin: 0 auto;
+    }
+    .nav_bar ul li a {
+        text-decoration: none;
+        padding: 15px 55px;
+    }
+    .search_box {
+        border: 1px solid #1b5ac2;
+        height: 40px;
+    }
+    .search_box input {
+        padding: 10px;
+        outline: none;
+        border: 0px;
+        float: left;
+    }
+    .search_box button {
+        border: 0px;
+        width: 40px;
+        outline: none;
+        height: 100%;
+        float: right;
+        background-color: blue;
+    }
+</style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <div>
+                <a href="">로고</a>
+            </div>
+
+            <div>
+                <a href="">마이페이지</a>
+                <a href="">로그인</a>
+                <a href="">회원가입</a>
+            </div>
+        </div>
+    
+        <div class="gnb">
+            <div class="nav_bar">
+                <ul>
+                    <li><a href="index">홈</a></li>
+                    <li><a href="">투자</a></li>
+                    <li><a href="/partner/list">동업</a></li>
+                    <li><a href="">수요조사</a></li>
+                    <li><a href="/customer/guide">고객센터</a></li>
+                </ul>  
+            </div>
+            <div class="search_box">
+                <input placeholder="검색">
+                <button>검색버튼</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
