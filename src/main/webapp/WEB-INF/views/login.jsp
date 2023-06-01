@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,20 +12,27 @@
     <link rel="stylesheet" href="/resources/css/login.css">
 </head>
 <body>
-    <header style="border-bottom:1px solid #e4e4e4;">
+    <header>
         <div class="header_wrap">
             <div class="header_top">
                     <a href="../"><img src="/resources/img/logo.png"></a>
-                    <a href="/writeselect" id="new_iv">투자신청하기</a>
-                    <a href="/signup" id="sign_up">회원가입</a>
-                    <a href="/login" id="sign_in">로그인</a>
+                    <c:if test="${sessionScope.member==null}">
+	                    <a href="/login" id="new_iv" onClick="alert('먼저 로그인해 주세요.')">투자신청하기</a>
+	                    <a href="/signup" id="sign_up">회원가입</a>
+	                    <a href="/login" id="sign_in">로그인</a>
+                    </c:if>
+                    <c:if test="${sessionScope.member!=null}">
+                    	<a href="/writeselect" id="new_iv">투자신청하기</a>
+						<a href="/mypage/list" id="my_page">마이페이지</a>
+						<p class="user_name">${sessionScope.member.name}님 환영합니다!</p>
+					</c:if>
             </div>
             <div class="gnb">
                 <div class="gnb_button">
                     <a href="../">홈</a>
                     <a href="../investment/list">투자</a>
                     <a href="../partner/list">동업</a>
-                    <a href="">수요조사</a>
+                    <a href="../survey/list">수요조사</a>
                     <a href="../customer/list">고객센터</a>
                 </div>
                 <div class="search_box">

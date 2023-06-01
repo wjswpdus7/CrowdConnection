@@ -2,7 +2,7 @@ package kr.ac.kopo.Controller;
 
 
 import org.springframework.stereotype.Controller;
-
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -15,6 +15,11 @@ public class PartnerController {
 	public String list() {
 		
 		return path + "list";
+	}
+	
+	@GetMapping("/write") 
+	public String write() {
+		return path + "write";
 	}
 	
 }
