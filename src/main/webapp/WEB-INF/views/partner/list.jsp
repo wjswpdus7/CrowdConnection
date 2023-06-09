@@ -84,152 +84,22 @@
             </div>
 
             <div class="list_contents">
+            	<c:forEach var="item" items="${list}">
                 <div class="open_item">
                     <div class="thumbnail">
-                        <a href=""><img src="/resources/img/thumbnail1.png"></a>
+                        <a href="detail/${item.id}"><img src="/thumbnail/${item.uuid}_${item.filename}"></a>
                     </div>
                     <div class="title">
-                        <a href=""><span>진행중</span><strong>CHAT GPT로 수익 올리기</strong></a>
+                        <a href="detail/${item.id}"><span>진행중</span><strong>${item.title}</strong></a>
                     </div>
                     <div class="information">
-                        <p>5일남음</p>
+                        <p>${item.leftDate}일 남음</p>
                     </div>
                 </div>
-
-                <div class="ended_item">
-                    <div class="thumbnail">
-                        <a href=""><img src="/resources/img/thumbnail2.png"></a>
-                    </div>
-                    <div class="title">
-                        <a href=""><span>종료</span><strong>블로그 운영 비법</strong></a>
-                    </div>
-                    <div class="information">
-                        <p>안남음</p>
-                    </div>
-                </div>
-
-                <div class="open_item">
-                    <div class="thumbnail">
-                        <a href=""><img src="/resources/img/thumbnail3.png"></a>
-                    </div>
-                    <div class="title">
-                        <a href=""><span>진행중</span><strong>면역력 증가 알약</strong></a>
-                    </div>
-                    <div class="information">
-                        <p>6일남음</p>
-                    </div>
-                </div>
-
-                <div class="open_item">
-                    <div class="thumbnail">
-                        <a href=""><img src="/resources/img/thumbnail4.png"></a>
-                    </div>
-                    <div class="title">
-                        <a href=""><span>진행중</span><strong>귀여운 빨간공</strong></a>
-                    </div>
-                    <div class="information">
-                        <p>13일남음</p>
-                    </div>
-                </div>
-
-                <div class="open_item">
-                    <div class="thumbnail">
-                        <a href=""><img src="/resources/img/thumbnail5.png"></a>
-                    </div>
-                    <div class="title">
-                        <a href=""><span>진행중</span><strong>풍력 발전기</strong></a>
-                    </div>
-                    <div class="information">
-                        <p>20일남음</p>
-                    </div>
-                </div>
-
-                <div class="open_item">
-                    <div class="thumbnail">
-                        <a href=""><img src="/resources/img/thumbnail6.png"></a>
-                    </div>
-                    <div class="title">
-                        <a href=""><span>진행중</span><strong>우리아이 첫 신발</strong></a>
-                    </div>
-                    <div class="information">
-                        <p>4일남음</p>
-                    </div>
-                </div>
-
-                <div class="open_item">
-                    <div class="thumbnail">
-                        <a href=""><img src="/resources/img/thumbnail7.png"></a>
-                    </div>
-                    <div class="title">
-                        <a href=""><span>진행중</span><strong>맛있는 버섯탕</strong></a>
-                    </div>
-                    <div class="information">
-                        <p>6일남음</p>
-                    </div>
-                </div>
-
-                <div class="open_item">
-                    <div class="thumbnail">
-                        <a href=""><img src="/resources/img/thumbnail8.png"></a>
-                    </div>
-                    <div class="title">
-                        <a href=""><span>진행중</span><strong>세종시 맛집 새우탕</strong></a>
-                    </div>
-                    <div class="information">
-                        <p>6일남음</p>
-                    </div>
-                </div>
-
-                <div class="open_item">
-                    <div class="thumbnail">
-                        <a href=""><img src="/resources/img/thumbnail9.png"></a>
-                    </div>
-                    <div class="title">
-                        <a href=""><span>진행중</span><strong>하이볼 메이커</strong></a>
-                    </div>
-                    <div class="information">
-                        <p>6일남음</p>
-                    </div>
-                </div>
-
-                <div class="open_item">
-                    <div class="thumbnail">
-                        <a href=""><img src="/resources/img/thumbnail4.png"></a>
-                    </div>
-                    <div class="title">
-                        <a href=""><span>진행중</span><strong>면역력 증가 알약</strong></a>
-                    </div>
-                    <div class="information">
-                        <p>6일남음</p>
-                    </div>
-                </div>
-
-                <div class="open_item">
-                    <div class="thumbnail">
-                        <a href=""><img src="/resources/img/thumbnail5.png"></a>
-                    </div>
-                    <div class="title">
-                        <a href=""><span>진행중</span><strong>면역력 증가 알약</strong></a>
-                    </div>
-                    <div class="information">
-                        <p>6일남음</p>
-                    </div>
-                </div>
-
-                <div class="open_item">
-                    <div class="thumbnail">
-                        <a href=""><img src="/resources/img/thumbnail6.png"></a>
-                    </div>
-                    <div class="title">
-                        <a href=""><span>진행중</span><strong>면역력 증가 알약</strong></a>
-                    </div>
-                    <div class="information">
-                        <p>6일남음</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-      </div>
+                </c:forEach>
+        	</div>
+      	</div>
+    </div>
       
 	<footer>
       <div class="footer" style="font-size:1.4rem;">

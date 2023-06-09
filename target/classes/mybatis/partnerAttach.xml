@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="partnerAttach">
+
+   <insert id="add">
+      INSERT INTO partner_attach
+      (filename, write_id, uuid, type)
+      VALUES (#{filename}, #{writeId}, #{uuid}, #{type})
+   </insert>
+   
+   
+   <select id="thumbnail" resultType="attach">
+		SELECT filename, uuid FROM partner_attach where write_id = #{id} and type = 1
+   </select>
+   
+   <select id="topImage" resultType="attach">
+   		SELECT filename, uuid FROM partner_attach where write_id = #{id} and type = 2
+   		
+   </select>
+   
+   <select id="attachs" resultType="attach">
+   		SELECT filename, uuid FROM partner_attach where write_id = #{id} and type = 3
+   </select>
+</mapper>

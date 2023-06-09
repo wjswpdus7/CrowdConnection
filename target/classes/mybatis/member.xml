@@ -5,6 +5,6 @@
 		select * from member where id=#{id} and password=#{password}
 	</select>
 	<insert id="signup">
-		exec signup(#{id},#{password},#{tel},#{address},#{grade},#{contents})
+		INSERT INTO member VALUES (MEMBER_SEQ.NEXTVAL,#{id}, #{password}, #{tel}, #{address}, 1, #{name})
 	</insert>
 </mapper>

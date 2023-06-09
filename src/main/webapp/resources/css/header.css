@@ -104,6 +104,7 @@ header a {
     font-size: 14px;
     border:none;
     outline:none;
+    vertical-align: middle;
 }
 
 .search_box img {

@@ -1,21 +1,41 @@
 package kr.ac.kopo.model;
 
-import java.util.Date;
+import java.util.List;
 
-import org.springframework.format.annotation.DateTimeFormat;
 
 public class Write {
 		
 	private int id;
 	private String title;
 	private String subTitle;
+	private String homepage;
+	private String pubDate;
+	private String endDate;
+	private String leftDate;
+	
+	private Attach thumbnail;
+	private List<Attach> topImage;
+	private String uuid;
+	private String filename;
+	
 	private int goolMoney;
 	private int tick;
-	@DateTimeFormat(pattern="yyyy-MM-dd")
-	private Date endDate;
-	private String homepage;
-	@DateTimeFormat(pattern="yyyy-MM-dd")
-	private Date pubDate;
+	
+	private int partnerCategory;
+	
+	
+	public String getUuid() {
+		return uuid;
+	}
+	public void setUuid(String uuid) {
+		this.uuid = uuid;
+	}
+	public String getFilename() {
+		return filename;
+	}
+	public void setFilename(String filename) {
+		this.filename = filename;
+	}
 	public int getId() {
 		return id;
 	}
@@ -40,22 +60,24 @@ public class Write {
 	public void setGoolMoney(int goolMoney) {
 		this.goolMoney = goolMoney;
 	}
-	public Date getPubDate() {
-		return pubDate;
-	}
-	public void setPubDate(Date pubDate) {
-		this.pubDate = pubDate;
-	}
+	
 	public int getTick() {
 		return tick;
 	}
 	public void setTick(int tick) {
 		this.tick = tick;
 	}
-	public Date getEndDate() {
+	
+	public String getPubDate() {
+		return pubDate;
+	}
+	public void setPubDate(String pubDate) {
+		this.pubDate = pubDate;
+	}
+	public String getEndDate() {
 		return endDate;
 	}
-	public void setEndDate(Date endDate) {
+	public void setEndDate(String endDate) {
 		this.endDate = endDate;
 	}
 	public String getHomepage() {
@@ -64,6 +86,34 @@ public class Write {
 	public void setHomepage(String homepage) {
 		this.homepage = homepage;
 	}
+	public Attach getThumbnail() {
+		return thumbnail;
+	}
+	public void setThumbnail(Attach thumbnail) {
+		this.thumbnail = thumbnail;
+	}
+	public List<Attach> getTopImage() {
+		return topImage;
+	}
+	public void setTopImage(List<Attach> topImage) {
+		this.topImage = topImage;
+	}
+	public int getPartnerCategory() {
+		return partnerCategory;
+	}
+	public void setPartnerCategory(int partnerCategory) {
+		this.partnerCategory = partnerCategory;
+	}
+	public String getLeftDate() {
+		return leftDate;
+	}
+	public void setLeftDate(String leftDate) {
+		this.leftDate = leftDate;
+	}
+	
+	
+	
+	
 
 	
 	

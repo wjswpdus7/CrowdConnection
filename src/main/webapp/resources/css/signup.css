@@ -30,9 +30,7 @@ body {
 	color: inherit
 }
 
-ul.tabs li{
-    cursor: pointer;
-  }
+
 
 .tabs .current {
     background-color: #03134a;
@@ -101,7 +99,7 @@ ul.tabs li{
     font-size: 13px;
     font-weight: 500;
     border:1px solid #bbb;
-	cursor: pointer;
+    cursor: pointer;
 }
 
 .before_bt {

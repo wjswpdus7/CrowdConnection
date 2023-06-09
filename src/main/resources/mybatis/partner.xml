@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="partner">
+
+	<select id="list" resultType="write">
+		select p.*, trunc(end_date) - trunc(SYSDATE) left_date, filename, uuid from partner p join partner_attach a on (p.id = a.write_id) where type = 1 and trunc(end_date) - trunc(SYSDATE) > 0
+	</select>
+	
+	<insert id="write">
+		INSERT INTO partner (id , title, sub_title, end_date, homepage, pub_date, partner_category)	
+		VALUES (PARTNER_SEQ.NEXTVAL, #{title}, #{subTitle}, #{endDate}, #{homepage}, SYSDATE, #{partnerCategory})
+		
+		<selectKey resultType="int" keyProperty="id" order="AFTER">
+    		SELECT MAX(id) FROM partner
+    	</selectKey>
+	</insert>
+	
+	<select id="item" resultType="write">
+		select id, title, sub_title, TO_CHAR(end_date, 'yyyy-mm-dd') end_date, TO_CHAR(pub_date, 'yyyy-mm-dd') pub_date, homepage, partner_category, trunc(end_date) - trunc(SYSDATE) left_date  from partner where id = #{id}
+	</select>
+	
+</mapper>

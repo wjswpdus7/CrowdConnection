@@ -27,6 +27,8 @@
 			<mapper resource="mybatis/investSummer.xml"/>
 			<mapper resource="mybatis/notice.xml"/>
 			<mapper resource="mybatis/attach.xml"/>
+			<mapper resource="mybatis/partner.xml"/>
+			<mapper resource="mybatis/partnerAttach.xml"/>
 			<mapper resource="mybatis/survey.xml"/>
 	</mappers>
 </configuration>

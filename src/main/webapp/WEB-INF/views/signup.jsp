@@ -51,14 +51,14 @@
 
 		<div class="process_nav">
 			<ul class="tabs">
-				<li class="tab-link tab-1 current" data-tab="tab-1">약관동의</li>
-				<li class="tab-link tab-2" data-tab="tab-2">정보입력</li>
-				<li style="cursor: default;">가입완료</li>
+				<li class="tab-1 current" >약관동의</li>
+				<li class="tab-2" >정보입력</li>
+				<li >가입완료</li>
 			</ul>
 		</div>
 
 		<div class="signup_wrap">
-			<form method="post">
+			<form id="myform" method="post">
 			<div id="tab-1" class="tab-content current">
 					<div class="agr_wrap">
 						<div tabindex="0" class="agree_content">
@@ -231,7 +231,7 @@
 						<div class="agree_checkbox">
 							<div class="agree_inside">
 								<label for="chk1">이용약관 동의 (필수)</label>
-								<input type="checkbox" id="chk1">
+								<input type="checkbox" name="agree" id="chk1">
 							</div>
 						</div>
 					</div>
@@ -407,14 +407,14 @@
 						<div class="agree_checkbox">
 							<div class="agree_inside">
 								<label for="chk2">개인정보 수집 및 이용 동의 (필수)</label>
-								<input type="checkbox" id="chk2">
+								<input type="checkbox" name="agree" id="chk2">
 							</div>
 						</div>
 					</div>
 					
 					<div class="agr_all">
 						<label for="chk3">모든 약관에 동의합니다.</label>	
-						<input type="checkbox" id="chk3">
+						<input type="checkbox" name="agree" id="chk3" onclick='selectAll(this)'>
 					</div>
 					
 					<div class="tab_ctrl">
@@ -486,7 +486,7 @@
 					<div class="tab_ctrl">
 						<ul class="tabs2">
 							<li class="before_bt tab-ctrl" data-tab="tab-1">이전</li>
-							<li class="after_bt"><input type="submit">다음</li>
+							<li class="after_bt" onclick="myform.submit();">다음</li>
 						</ul>
 					</div>
 				</div>
@@ -520,6 +520,17 @@
 				$("#" + tab_id).addClass('current');
 			});
 		});
+	</script>
+	
+	<script>
+		function selectAll(selectAll)  {
+		  const checkboxes 
+		       = document.getElementsByName('agree');
+		  
+		  checkboxes.forEach((checkbox) => {
+		    checkbox.checked = selectAll.checked;
+		  })
+		}
 	</script>
 </body>
 

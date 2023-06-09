@@ -20,7 +20,9 @@
 		<beans:property name="prefix" value="/WEB-INF/views/" />
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
-	<resources location="file:///c:/upload/" mapping="/images/**"></resources>
+	<resources location="file:///c:/upload/" mapping="/upload/**"></resources>
+	<resources location="file:///c:/topUpload/" mapping="/topUpload/**"></resources>
+	<resources location="file:///c:/thumbnailUpload/" mapping="/thumbnail/**"></resources>
 	
 	<context:component-scan base-package="kr.ac.kopo" />
 	

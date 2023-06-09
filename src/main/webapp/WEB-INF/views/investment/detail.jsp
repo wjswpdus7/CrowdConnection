@@ -48,7 +48,7 @@
                 <div class="gnb_button">
                     <a href="../../">홈</a>
                     <a href="../investment/list">투자</a>
-                    <a href="../partner/list">동업</a>
+                    <a href="/partner/list">동업</a>
                     <a href="../survey/list">수요조사</a>
                     <a href="../customer/list">고객센터</a>
                 </div>

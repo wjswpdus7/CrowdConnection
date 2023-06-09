@@ -94,7 +94,6 @@ body {
 
 .list_contents {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
     margin: 0 auto;
     width: 90%;
@@ -102,12 +101,19 @@ body {
 
 .list_contents > div {
     width: 30%;
-    margin: 0 15px 40px;
+    margin: 0 18px 50px;
 }
 
+.thumbnail {
+    width: 324px;
+    height: 183px;
+    border-radius: 10px;
+}
 
 .thumbnail a img{
-    width: 100%;    
+    width: 100%;  
+    height: 100%;  
+	object-fit:cover;
 }
 
 .open_item .title span{

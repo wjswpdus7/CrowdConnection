@@ -64,13 +64,11 @@
 		<div id="background">
 			<div>
 				<div id="imgmain">
-					<img id="big" src="/resources/img/image1.png">
+					<img id="big" src="/thumbnail/${thumbnail.uuid}_${thumbnail.filename}">
 					<div id="imgsub">
-						<img class="small" src="/resources/img/image1.png"> <img
-							class="small" src="/resources/img/image2.png"> <img
-							class="small" src="/resources/img/image3.png"> <img
-							class="small" src="/resources/img/image4.png"> <img
-							class="small" src="/resources/img/image5.png">
+						<c:forEach var="topImage" items="${topImage}">
+							<img class="small" src="/topUpload/${topImage.uuid}_${topImage.filename}"> 
+						</c:forEach>
 					</div>
 					<script src="/resources/js/change.js"></script>
 				</div>
@@ -82,8 +80,7 @@
 						<span class="sub-text">참여자 (x)</span>&nbsp; 46명
 					</div>
 					<div class="detail-text">
-						<span class="sub-text">남은기간</span>&nbsp; 8일 &nbsp; <span
-							class="sub-text">2023-06-12(end-date) 종료</span>
+						<span class="sub-text">남은기간</span>&nbsp; ${item.leftDate}일 &nbsp; <span class="sub-text">${item.endDate} 종료</span>
 					</div>
 					<button class="detail-button" type='button'
 						onclick="location.href='agree'">투자하기</button>

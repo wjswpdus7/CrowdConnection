@@ -70,14 +70,17 @@
 							<h1>기본정보작성</h1>
 							<p>필수적인 정보 입력페이지 입니다.</p>
 						</div>
+						
 						<div class="title_wrap" id="must_wt">
 							<p>제목</p>
 							<input name="title" type="text" placeholder="제목을 입력해주세요.">
 						</div>
+						
 						<div class="title_wrap" id="must_wt">
 							<p>서브타이틀</p>
 							<input name="subTitle" type="text" placeholder="서브타이틀을 입력해주세요.">
 						</div>
+						
 						<div class="thumbnail_wrap" id="must_wt">
 							<div class="thubnail_title">
 								<p>대표 이미지</p>
@@ -98,17 +101,30 @@
 									
 									<div class="thumbnail_input">
 										<label for="tn">사진선택</label>
-										<input type="file" id="tn" onchange="readURL(this);" name="thumbnail">
-									</div>
-								</div>
-								
-								<div>
-									<label>첨부파일:<button type="button" id="add">추가</button></label>
-									<div id="attachs">
-										<input type="file" name="attach">
+										<input type="file" id="tn" onchange="readURL(this);" name="image1">
 									</div>
 								</div>
 							</div>
+						</div>
+						
+						<div>
+							<p>소개 이미지</p>
+							<label>첨부파일:</label>
+							<input type="file" name="image2">
+							<button type="button" id="add">추가</button>
+						</div>
+						
+						<div>
+							<p>모집 항목</p>
+							<select name="partnerCategory">
+								<option value="1">인원모집</option>
+								<option value="2">동업자</option>
+								<option value="3">협찬</option>
+								<option value="4">광고</option>
+								<option value="5">장소, 공간</option>
+								<option value="6">자원봉사</option>
+								<option value="7">기타(연락 희망)</option>
+							</select>
 						</div>
 
 						<div class="date_wrap" id="must_wt">
