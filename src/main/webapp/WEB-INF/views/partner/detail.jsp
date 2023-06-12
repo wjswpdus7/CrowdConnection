@@ -17,7 +17,7 @@
 <link rel="stylesheet" href="/resources/css/css.css">
 <link rel="stylesheet" href="/resources/css/modal.css">
 <link rel="stylesheet" href="/resources/css/header.css">
-<link rel="stylesheet" href="/resources/css/detail.css">
+<link rel="stylesheet" href="/resources/css/partner_detail.css">
 <link rel="stylesheet" href="/resources/css/invest_list.css">
 <link rel="shortcut icon" href="/resources/img/favicon.ico">
 <script src="/resources/js/tablabel.js"></script>
@@ -66,6 +66,7 @@
 				<div id="imgmain">
 					<img id="big" src="/thumbnail/${thumbnail.uuid}_${thumbnail.filename}">
 					<div id="imgsub">
+							<img class="small" src="/thumbnail/${thumbnail.uuid}_${thumbnail.filename}">
 						<c:forEach var="topImage" items="${topImage}">
 							<img class="small" src="/topUpload/${topImage.uuid}_${topImage.filename}"> 
 						</c:forEach>
@@ -111,11 +112,41 @@
 
 						</div>
 						<div id="tab-2" class="tab-content">
-						()
-						(tel)
-						(address)
-						(email)
-						(homepage)
+							<div class="pub_info">
+								<div>
+									<p>사업체 또는 대표자명</p>
+									<span>${item.name}</span>
+								</div>
+								
+								<div>
+									<p>이메일</p>
+									<span>${item.mail}</span>
+								</div>
+								
+								<div>
+									<p>전화번호</p>
+									<span>${item.tel}</span>
+								</div>
+								
+								<c:if test = "${item.url != null}">
+									<div>
+										<p>홈페이지</p>
+										<span><a href="http://${item.url}" target="_blank">${item.url}</a></span>
+									</div>
+								</c:if>
+								
+								<c:if test = "${item.address != null}">
+									<div>
+										<p>주소</p>
+										<span>${item.address}</span>
+									</div>
+								</c:if>
+								
+								<div>
+									<p>전화번호</p>
+									<span><a href="http://naver.com">asdfghjkjhgfdsadfghjkljhgfdsfghjkljhsdsadsdsdsadsasagfd<i></i></a></span>
+								</div>
+							</div>
 						</div>
 						
 						
@@ -135,15 +166,24 @@
 						
 						
 								<div id="tab-4" class="tab-content">
-								<c:forEach var="0" begin="1" end="3">
-									<div class="detail_reply">
-								<div class="detail_tab4_title">사용자<div class="detail_tab4_date">May 15,2023 10:46AM</div></div>
-									<hr>
-									<div>
-										<p class="detail_tab_text">안녕하세요 테스트용 댓글입니다.</p>
+									<div class="comments_wrap">
+									
+										<c:forEach var="0" begin="1" end="3">
+											<div class="detail_reply">
+												<div>
+													<p class="detail_tab_text">안녕하세요 테스트용 댓글입니다.</p>
+												</div>
+											</div>
+										</c:forEach>
+										
 									</div>
-								</div>
-								</c:forEach>
+									
+								<form method="post" id="myform" action="comment_add">
+									<div class="comment_input_wrap">
+										<textarea placeholder="무분별한 비난 및 욕설은 삭제될 수 있습니다."></textarea>
+										<button onclick="myform.submit();">등록</button>
+									</div>
+								</form>
 							</div>
 						
 					</div>
@@ -157,13 +197,19 @@
 		<hr>
 		<div id="modal_main">
 			<div class="modal_main_text">
-				사업자 정보:&nbsp; <span class="modal_sub_text">한국항공우주연구원</span>
+				사업체 혹은 대표자명:&nbsp; <span class="modal_sub_text">${item.name}</span>
 			</div>
 			<div class="modal_main_text">
-				(email)이메일:&nbsp; <span class="modal_sub_text">admin@kari.re.kr</span>
+				이메일:&nbsp; <span class="modal_sub_text">${item.mail}</span>
 			</div>
 			<div class="modal_main_text">
-				(tel)전화번호:&nbsp; <span class="modal_sub_text">042-860-2114</span>
+				전화번호:&nbsp; <span class="modal_sub_text">${item.tel}</span>
+			</div>
+			<div class="modal_main_text">
+				홈페이지:&nbsp; <span class="modal_sub_text"><a href="${item.url}" target="_blank">${item.url}</a></span>
+			</div>
+			<div class="modal_main_text">
+				주소:&nbsp; <span class="modal_sub_text">${item.address}</span>
 			</div>
 		</div>
 		<hr>

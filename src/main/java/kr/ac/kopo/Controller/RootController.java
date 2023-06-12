@@ -31,6 +31,7 @@ public class RootController {
 			HttpSession session = request.getSession();
 			session.setAttribute("target_url", url);
 		}
+		
 		return "login";
 	}
 	@PostMapping("/login")

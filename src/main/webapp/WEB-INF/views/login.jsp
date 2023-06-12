@@ -87,8 +87,8 @@
                     </div>
 
                     <div class="sns_login">
-                        <button class="kakao_button" type="button">
-                                <div class="kakao_logo"></div>                       
+                        <button class="kakao_button" type="button" onclick="kakaoLogin();">
+                                <div class="kakao_logo" ></div>                       
                                 <span>카카오로 시작하기</span>
                         </button>
 
@@ -101,5 +101,30 @@
 				</form>
             </div>
         </div>
+        
+        <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+        <script>
+			Kakao.init('a3739984428c4d3fef9e905845b967d5'); //발급받은 키 중 javascript키를 사용해준다.
+			console.log(Kakao.isInitialized()); // sdk초기화여부판단
+			//카카오로그인
+			function kakaoLogin() {
+			    Kakao.Auth.login({
+			      success: function (response) {
+			        Kakao.API.request({
+			          url: '/v2/user/me',
+			          success: function (response) {
+			        	  console.log(response)
+			          },
+			          fail: function (error) {
+			            console.log(error)
+			          },
+			        })
+			      },
+			      fail: function (error) {
+			        console.log(error)
+			      },
+			    })
+			  }
+  		</script>
 </body>
 </html>

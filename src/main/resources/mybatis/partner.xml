@@ -7,8 +7,8 @@
 	</select>
 	
 	<insert id="write">
-		INSERT INTO partner (id , title, sub_title, end_date, homepage, pub_date, partner_category)	
-		VALUES (PARTNER_SEQ.NEXTVAL, #{title}, #{subTitle}, #{endDate}, #{homepage}, SYSDATE, #{partnerCategory})
+		INSERT INTO partner (id , title, sub_title, end_date, pub_date, partner_category, tel, mail, url, name, address)	
+		VALUES (PARTNER_SEQ.NEXTVAL, #{title}, #{subTitle}, #{endDate}, SYSDATE, #{partnerCategory}, #{tel}, #{mail}, #{url}, #{name}, #{address})
 		
 		<selectKey resultType="int" keyProperty="id" order="AFTER">
     		SELECT MAX(id) FROM partner
@@ -16,7 +16,7 @@
 	</insert>
 	
 	<select id="item" resultType="write">
-		select id, title, sub_title, TO_CHAR(end_date, 'yyyy-mm-dd') end_date, TO_CHAR(pub_date, 'yyyy-mm-dd') pub_date, homepage, partner_category, trunc(end_date) - trunc(SYSDATE) left_date  from partner where id = #{id}
+		select id, title, sub_title, TO_CHAR(end_date, 'yyyy-mm-dd') end_date, TO_CHAR(pub_date, 'yyyy-mm-dd') pub_date, partner_category, trunc(end_date) - trunc(SYSDATE) left_date, tel, mail, url, name, address  from partner where id = #{id}
 	</select>
 	
 </mapper>

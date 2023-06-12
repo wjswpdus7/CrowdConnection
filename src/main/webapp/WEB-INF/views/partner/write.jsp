@@ -131,11 +131,7 @@
 							<p>목표기간</p>
 							<input name="endDate" type="date">
 						</div>
-						<div>
-							<p>홈페이지</p>
-							<input name="homepage" type="text">
-						</div>
-
+						
 					</div>
 
 					<div id="tab-2" class="tab-content">
@@ -155,15 +151,32 @@
 							<h1>사업자 정보 작성</h1>
 							<p>사장님 또는 사업체의 연락처를 작성해주세요.</p>
 						</div>
-
-						<div class="contents_wrap">
-							<p>내용</p>
-							<textarea name="report" id="summernote2"></textarea>
+						
+						<div class="title_wrap" id="must_wt">
+							<p>사업체명 혹은 대표자명</p>
+							<input name="name" type="text">
 						</div>
-
-						<div>
-							<p></p>
+						
+						<div class="title_wrap" id="must_wt">
+							<p>이메일</p>
+							<input name="mail" type="text">
 						</div>
+						
+						<div class="title_wrap" id="must_wt">
+							<p>전화번호</p>
+							<input name="tel" type="text">
+						</div>
+						
+						<div class="title_wrap">
+							<p>URL</p>
+							<input name="url" type="text">
+						</div>
+						
+						<div class="title_wrap">
+							<p>주소</p>
+							<input name="address" type="text">
+						</div>
+						
 						<button class="btn btn-sm" class="bt">
 							<i class="bi bi-file-earmark-check">등록</i>
 						</button>
@@ -193,19 +206,7 @@
 							[ 'view', [ 'fullscreen', 'codeview', 'help' ] ] ]
 				});
 		
-		$('#summernote2').summernote(
-				{
-					placeholder : '프로젝트를 상세하게 소개하는 글을 작성해주세요.',
-					tabsize : 2,
-					height : 500,
-					toolbar : [ [ 'style', [ 'style' ] ],
-							[ 'font', [ 'bold', 'underline', 'clear' ] ],
-							[ 'color', [ 'color' ] ],
-							[ 'para', [ 'ul', 'ol', 'paragraph' ] ],
-							[ 'table', [ 'table' ] ],
-							[ 'insert', [ 'link', 'picture', 'video' ] ],
-							[ 'view', [ 'fullscreen', 'codeview', 'help' ] ] ]
-				});
+		
 
 		//탭메뉴 
 		$(document).ready(function() {

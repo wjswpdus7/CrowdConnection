@@ -1,0 +1,109 @@
+@charset "UTF-8";
+
+hr {
+	margin: 0px;
+}
+
+#background {
+
+	width: 1200px;
+	margin: 0 auto;
+}
+
+#textmain{
+	display:inline-block;
+	position: absolute;
+    top: 165px;
+    line-height: 3;
+}
+
+.detail-text{
+	font-size:25px;
+	font-weight:bold;
+}
+
+.sub-text{
+	font-size:14px;
+	font-weight:bold;
+	color :#969696;
+}
+
+.detail-button{
+	border:0.8px solid #d8d8d8;
+	background-color:white;
+	font-size:14px;
+	border-radius:10px;
+	width: 200px;
+    margin: 15px;
+    margin-left: 0px;
+	
+}
+	.heart{
+	font-size:25px;
+	}
+
+#tab-2 {
+	background-color: #e6e6e6;
+	min-height: 500px;
+}
+
+.pub_info {
+	background-color: #fff;
+	margin: 50px;
+}
+
+.pub_info div {
+	display: flex;
+	margin: 0 auto;
+}
+
+.pub_info div p {
+	font-size: 15px;
+	font-weight: 300;
+	width: 145px;
+	text-align: right;
+	margin-right: 30px;
+	
+}
+
+.pub_info div span {
+	font-size: 16px;
+	font-weight: 300;
+	width: 300px;
+    text-align: right;
+}
+
+.pub_info div span a i{
+	background-image: src="resources/img/link.png";
+}
+
+.comment_input_wrap {
+	width: 75%;
+	margin: 40px auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+.comment_input_wrap textarea{
+	width: 75%;
+	height: 80px;
+	outline: none;
+	font-size: 14px;
+	padding: 13px;
+	border: 1px solid #bbb;
+    border-radius: 3px;
+    resize: none;
+}
+
+.comment_input_wrap textarea::placeholder {
+	font-size: 14px;
+	color: #bbb;	
+}
+	
+.comment_input_wrap button {
+	border: 1px solid #bbb;
+	border-radius: 5px;
+	outline: none;
+	width: 20%;
+	height: 80px;
+}
