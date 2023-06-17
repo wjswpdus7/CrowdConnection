@@ -12,14 +12,11 @@
 <link rel="stylesheet"
 	href="resources/css/summernote/summernote-lite.css">
 
-<link
-	href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css"
-	rel="stylesheet">
-<script
-	src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
 
 <link rel="stylesheet" href="/resources/css/css.css">
-<link rel="stylesheet" href="/resources/css/write.css">
+<link rel="stylesheet" href="/resources/css/partner_write.css">
 </head>
 <body>
 	<header>
@@ -57,10 +54,10 @@
 		<div class="page_wrap">
 			<div class="process_nav">
 				<ul class="tabs">
-					<li class="tab-link current" data-tab="tab-1">기본정보작성</li>
-					<li class="tab-link " data-tab="tab-2">소개글작성</li>
-					<li class="tab-lik " data-tab="tab-3">사업자정보작성</li>
-					<li class="tab-link " data-tab="tab-4">추가정보작성</li>
+					<li class="tab-1 tab-link current" data-tab="tab-1">기본정보작성</li>
+					<li class="tab-2 tab-link " data-tab="tab-2">소개이미지</li>
+					<li class="tab-3 tab-link " data-tab="tab-3">상세글작성</li>
+					<li class="tab-4 tab-link " data-tab="tab-4">사업자정보작성</li>
 				</ul>
 			</div>
 			<form method="post" enctype="multipart/form-data">
@@ -107,14 +104,14 @@
 							</div>
 						</div>
 						
-						<div>
-							<p>소개 이미지</p>
+						<div id="must_wt">
+							<p>상단 이미지</p>
 							<label>첨부파일:</label>
 							<input type="file" name="image2">
 							<button type="button" id="add">추가</button>
 						</div>
 						
-						<div>
+						<div id="must_wt">
 							<p>모집 항목</p>
 							<select name="partnerCategory">
 								<option value="1">인원모집</option>
@@ -132,21 +129,50 @@
 							<input name="endDate" type="date">
 						</div>
 						
+						<div class="tab_ctrl">
+							<ul class="tabs2">
+								<a href="javascript:history.back()"><li class="before_bt">취소</li></a>
+								<li class="after_bt tab-ctrl" data-tab="tab-2">다음</li>
+							</ul>
+						</div>
+						
 					</div>
 
 					<div id="tab-2" class="tab-content">
+						<div id="tab_top">
+								<h1>소개이미지</h1>
+								<p>사업을 소개하는 이미지를 등록해주세요.</p>
+						</div>
+						
+						
+						<div class="tab_ctrl">
+							<ul class="tabs2">
+								<a href="javascript:history.back()"><li class="before_bt">취소</li></a>
+								<li class="after_bt tab-ctrl" data-tab="tab-2">다음</li>
+							</ul>
+						</div>
+					</div>
+						
+
+					<div id="tab-3" class="tab-content">
 						<div id="tab_top">
 							<h1>상세정보</h1>
 							<p>사업을 소개하는 글을 상세하게 작성해주세요.</p>
 						</div>
 
 						<div class="contents_wrap">
-							<p>내용</p>
 							<textarea name="contents" id="summernote"></textarea>
 						</div>
+						
+						<div class="tab_ctrl">
+						<ul class="tabs2">
+							<li class="before_bt tab-ctrl" data-tab="tab-1">이전</li>
+							<li class="after_bt tab-ctrl" data-tab="tab-3">다음</li>
+						</ul>
+						</div>
 					</div>
-
-					<div id="tab-3" class="tab-content">
+					
+					<div id="tab-4" class="tab-content">
 						<div id="tab_top">
 							<h1>사업자 정보 작성</h1>
 							<p>사장님 또는 사업체의 연락처를 작성해주세요.</p>
@@ -177,10 +203,14 @@
 							<input name="address" type="text">
 						</div>
 						
-						<button class="btn btn-sm" class="bt">
-							<i class="bi bi-file-earmark-check">등록</i>
-						</button>
-
+						
+						<div class="tab_ctrl">
+							<ul class="tabs2">
+								<a href="javascript:history.back()"><li class="before_bt">취소</li></a>
+								<li class="after_bt tab-ctrl" data-tab="tab-2">확인</li>
+							</ul>
+						</div>
+						
 					</div>
 
 				</div>
@@ -188,7 +218,59 @@
 		</div>
 	</div>
 
-
+<div> 
+  <div class="footer">      
+   <div class="container">
+      <div class="top"><a href="../"><img src="/resources/img/footimg.png" ></a></div>
+   <div class="s1">
+      <div>
+                <div>
+                <h2 class="TM12">Team Members</h2>
+              </div>
+                <div class="ttt1">
+                   <p>유형주 : gadadaa@naver.com</p>
+            </div>
+            <div class="ttt2">
+                   <p>전제연 : gadadaa@naver.com</p>
+            </div>
+            <div class="ttt2">
+                   <p>이치수 : gadadaa@naver.com</p>
+            </div>
+            <div class="ttt2">
+                   <p>이시호 : gadadaa@naver.com</p>
+            </div>      
+      </div>
+   </div>
+         <div class="s2">
+              <div>
+                <h2 class="TM12">Team Member Github</h2>
+              </div>
+              <div class="image-container">
+                <div class="image">
+                     <a href="https://github.com/malnim/CC-team"><img src="/resources/img/footer.png"></a>
+                     <p class="np3">Yu Hyeong Ju</p>
+                </div>
+                <div class="image">
+                     <a href="https://github.com/malnim/CC-team"><img src="/resources/img/footer.png"></a>
+                     <p class="np3">Jeon Je Yeon</p>
+                </div>
+                <div class="image">
+                     <a href="https://github.com/malnim/CC-team"><img src="/resources/img/footer.png"></a>
+                     <p class="np3">Lee Chi Su</p>
+                </div>
+                  <div class="image">
+                     <a href="https://github.com/malnim/CC-team"><img src="/resources/img/footer.png"></a>
+                     <p class="np3">Lee Si Ho</p>
+                </div>
+             </div>
+          </div>
+      
+   </div>   
+  </div>
+             <address class="cop">
+                <strong>copyrightwebstoryboyAll rights Reserved.</strong>
+             </address>
+</div> 
 
 	<script>
 		//섬머노트
@@ -210,13 +292,25 @@
 
 		//탭메뉴 
 		$(document).ready(function() {
-			$('ul.tabs li').click(function() {
+			$('ul.tabs li.tab-link').click(function() {
 				var tab_id = $(this).attr('data-tab');
 
 				$('ul.tabs li').removeClass('current');
 				$('.tab-content').removeClass('current');
 
 				$(this).addClass('current');
+				$("#" + tab_id).addClass('current');
+			});
+		});
+		
+		$(document).ready(function() {
+			$('ul.tabs2 li.tab-ctrl').click(function() {
+				var tab_id = $(this).attr('data-tab');
+
+				$('ul.tabs li').removeClass('current');
+				$('.tab-content').removeClass('current');
+
+				$('ul.tabs li.' + tab_id).addClass('current');
 				$("#" + tab_id).addClass('current');
 			});
 		});

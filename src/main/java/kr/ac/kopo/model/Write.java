@@ -17,7 +17,15 @@ public class Write {
 	private String url;
 	private String name;
 	private String address;
+	private String contents;
+	private int memberId;
 	
+	public int getMemberId() {
+		return memberId;
+	}
+	public void setMemberId(int memberId) {
+		this.memberId = memberId;
+	}
 	public String getTel() {
 		return tel;
 	}
@@ -144,6 +152,12 @@ public class Write {
 	}
 	public void setLeftDate(String leftDate) {
 		this.leftDate = leftDate;
+	}
+	public String getContents() {
+		return contents;
+	}
+	public void setContents(String contents) {
+		this.contents = contents;
 	}
 	
 	

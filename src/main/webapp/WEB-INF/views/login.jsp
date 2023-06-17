@@ -63,13 +63,7 @@
                 <div>
                     <input type="password" name="password" placeholder="비밀번호">
                 </div>
-                <div style="width: 100%;">
-                    <div class="find">
-                        <a href="">
-                            <span>아이디, 비밀번호 찾기</span>
-                        </a>
-                    </div>
-                </div>
+                
 
                 <div class="button_area">
                     <div class="login_button">

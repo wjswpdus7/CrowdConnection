@@ -40,6 +40,8 @@ public class RootController {
 			session.setAttribute("member", member);
 			String target_url = (String) session.getAttribute("target_url");
 			session.removeAttribute("target_url");
+			
+			
 			if(target_url==null) {
 				return "redirect:.";
 			}

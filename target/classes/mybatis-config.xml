@@ -14,6 +14,7 @@
 			<typeAlias type="kr.ac.kopo.model.InvestAttachSummer" alias="InvestAttachSummer"/>
 			<typeAlias type="kr.ac.kopo.model.Notice" alias="Notice"/>
 			<typeAlias type="kr.ac.kopo.model.Attach" alias="Attach"/>
+			<typeAlias type="kr.ac.kopo.model.Comments" alias="Comments"/>
 			<typeAlias type="kr.ac.kopo.model.Survey" alias="Survey"/>
 			
 	</typeAliases>
@@ -28,6 +29,7 @@
 			<mapper resource="mybatis/notice.xml"/>
 			<mapper resource="mybatis/attach.xml"/>
 			<mapper resource="mybatis/partner.xml"/>
+			<mapper resource="mybatis/comment.xml"/>
 			<mapper resource="mybatis/partnerAttach.xml"/>
 			<mapper resource="mybatis/survey.xml"/>
 	</mappers>

@@ -60,18 +60,7 @@
                         <li>확장</li>
                         <li>진행중</li>
                         <li>종료</li>
-                        <li id="hs_button" onclick="openCloseToc()">상세검색▶</li>
                     </ul>
-                </div>
-
-                <div id="hidden_search">
-                    <select>
-                        <option value="">전체</option>
-                        <option value="">제목</option>
-                        <option value="">내용</option>
-                    </select>
-                    <input type="text" placeholder="검색어를 입력해주세요.">
-                    <button>찾기</button>
                 </div>
 
                 <div class="sort">

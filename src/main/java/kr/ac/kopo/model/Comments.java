@@ -6,7 +6,22 @@ public class Comments {
 	private String commentText;
 	private String regDate;
 	private int writeId;
-	private int memberId;
+	private String memberId;
+	private int memberNum;
+	private String name;
+	
+	public String getMemberId() {
+		return memberId;
+	}
+	public void setMemberId(String memberId) {
+		this.memberId = memberId;
+	}
+	public int getMemberNum() {
+		return memberNum;
+	}
+	public void setMemberNum(int memberNum) {
+		this.memberNum = memberNum;
+	}
 	
 	public int getId() {
 		return id;
@@ -32,10 +47,11 @@ public class Comments {
 	public void setWriteId(int writeId) {
 		this.writeId = writeId;
 	}
-	public int getMemberId() {
-		return memberId;
+	
+	public String getName() {
+		return name;
 	}
-	public void setMemberId(int memberId) {
-		this.memberId = memberId;
+	public void setName(String name) {
+		this.name = name;
 	}
 }

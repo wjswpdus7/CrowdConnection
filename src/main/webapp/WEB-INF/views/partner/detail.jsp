@@ -62,7 +62,7 @@
 
 	<article>
 		<div id="background">
-			<div>
+			<div id="mainarea">
 				<div id="imgmain">
 					<img id="big" src="/thumbnail/${thumbnail.uuid}_${thumbnail.filename}">
 					<div id="imgsub">
@@ -75,19 +75,28 @@
 				</div>
 
 				<div id="textmain">
-					<h1>${item.title}</h1>
-					<h3>${item.subTitle}</h3>
-					<div class="detail-text">
-						<span class="sub-text">참여자 (x)</span>&nbsp; 46명
+					<div>
+						<span>[]</span>
+						<span>${item.title}</span>
 					</div>
-					<div class="detail-text">
-						<span class="sub-text">남은기간</span>&nbsp; ${item.leftDate}일 &nbsp; <span class="sub-text">${item.endDate} 종료</span>
+					<div>
+						<span>${item.subTitle}</span>
 					</div>
-					<button class="detail-button" type='button'
-						onclick="location.href='agree'">투자하기</button>
-					<button class="detail-button" type='button' id="modal_btn">문의하기</button>
-					<span class="heart"> <i class="bi bi-heart"></i> <i
-						class="bi bi-heart-fill"></i></span>
+					<div>
+						<span>게시일</span>
+						<span>${item.pubDate}</span>
+					</div>
+					<div>
+						<span>종료일</span>
+						<span>${item.endDate}</span>
+					</div>
+					<div>
+						<span>남은기간</span>
+						<span>${item.leftDate}일</span>
+					</div>
+					<div>
+						<button class="detail-button" type='button' id="modal_btn">문의하기</button>
+					</div>
 				</div>
 			</div>
 
@@ -97,9 +106,9 @@
 						<hr>
 						<!-- 탭 메뉴 상단 시작 -->
 						<ul class="tabs">
-							<li class="tab-link current" data-tab="tab-1">상세 정보</li>
-							<li class="tab-link" data-tab="tab-2">사업자정보</li>
-							<li class="tab-link" data-tab="tab-3">새소식</li>
+							<li class="tab-link current" data-tab="tab-1">사업소개</li>
+							<li class="tab-link" data-tab="tab-2">상세정보</li>
+							<li class="tab-link" data-tab="tab-3">사업자정보</li>
 							<li class="tab-link" data-tab="tab-4">댓글</li>
 						</ul>
 
@@ -107,80 +116,91 @@
 						<hr>
 						<!-- 탭 메뉴 내용 시작 -->
 						<div id="tab-1" class="tab-content current">
-
-							<img class="detail_content" src="/resources/img/image6.png">
-
+							<c:forEach var="attachs" items="${attachs}">
+								<div>
+									<img src="/upload/${attachs.uuid}_${attachs.filename}">
+								</div>
+							</c:forEach>
 						</div>
+						
 						<div id="tab-2" class="tab-content">
-							<div class="pub_info">
-								<div>
-									<p>사업체 또는 대표자명</p>
-									<span>${item.name}</span>
-								</div>
-								
-								<div>
-									<p>이메일</p>
-									<span>${item.mail}</span>
-								</div>
-								
-								<div>
-									<p>전화번호</p>
-									<span>${item.tel}</span>
-								</div>
-								
-								<c:if test = "${item.url != null}">
-									<div>
-										<p>홈페이지</p>
-										<span><a href="http://${item.url}" target="_blank">${item.url}</a></span>
-									</div>
-								</c:if>
-								
-								<c:if test = "${item.address != null}">
-									<div>
-										<p>주소</p>
-										<span>${item.address}</span>
-									</div>
-								</c:if>
-								
-								<div>
-									<p>전화번호</p>
-									<span><a href="http://naver.com">asdfghjkjhgfdsadfghjkljhgfdsfghjkljhsdsadsdsdsadsasagfd<i></i></a></span>
-								</div>
+							<div>
+								<p>${item.contents}</p>
 							</div>
 						</div>
 						
 						
 						<div id="tab-3" class="tab-content">
-						<c:forEach var="0" begin="1" end="3" >
-							<div class="detail_update">
-								<div class="detail_tab3_title">한국항공우주연구원<div>2 day ago</div></div>
-								<p>May 15,2023 10:46AM</p>
-										<hr>
+							<div class="pub_info">
+								<div class="pub_board">
 									<div>
-										<p class="detail_tab_text">업데이트 소식</p>
+										<p>사업체 또는 대표자명</p>
+										<span>${item.name}</span>
 									</div>
+									
+									<div>
+										<p>이메일</p>
+										<span>${item.mail}</span>
 									</div>
-											</c:forEach>
+									
+									<div>
+										<p>전화번호</p>
+										<span>${item.tel}</span>
+									</div>
+									
+									<c:if test = "${item.url != null}">
+										<div>
+											<p>홈페이지</p>
+											<span><a href="http://${item.url}" target="_blank">${item.url}</a></span>
+										</div>
+									</c:if>
+									
+									<c:if test = "${item.address != null}">
+										<div>
+											<p>주소</p>
+											<span>${item.address}</span>
+										</div>
+									</c:if>
+									
+									
 								</div>
+							</div>
+						</div>
+						
+						
+						
 				
 						
 						
 								<div id="tab-4" class="tab-content">
 									<div class="comments_wrap">
-									
-										<c:forEach var="0" begin="1" end="3">
-											<div class="detail_reply">
-												<div>
-													<p class="detail_tab_text">안녕하세요 테스트용 댓글입니다.</p>
-												</div>
+										<c:if test="${comments.size() < 1}">
+											<div class="cmt_emp">
+												<p>등록된 댓글이 없습니다.</p>
 											</div>
-										</c:forEach>
+										</c:if>
+									
+										
+											<ul class="cmt_grp">
+												<c:forEach var="comments" items="${comments}" >
+														<li class="cmt1">
+															<p id="cmt_name">${comments.memberId}</p>
+															<p id="cmt_text">${comments.commentText}</p>
+															<p id="cmt_date">${comments.regDate}</p>
+															<c:if test= "${sessionScope.member.num == comments.memberNum}">
+																<a href="comment_delete?${comments.id}" style="line-height: 2;"><img src="/resources/img/cancel.png" class="cmt_del_bt"></a>
+															</c:if>
+														</li>
+												</c:forEach>
+											</ul>
+										
+										
 										
 									</div>
 									
-								<form method="post" id="myform" action="comment_add">
+								<form method="post" id="myform" action="${item.id}/comment_add">
 									<div class="comment_input_wrap">
-										<textarea placeholder="무분별한 비난 및 욕설은 삭제될 수 있습니다."></textarea>
+										<textarea placeholder="무분별한 비난 및 욕설은 삭제될 수 있습니다." name="commentText"></textarea>
 										<button onclick="myform.submit();">등록</button>
 									</div>
 								</form>

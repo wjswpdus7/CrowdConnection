@@ -2,11 +2,18 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="comment">
 
-	
+	<select id="list" resultType="Comments">
+		SELECT partner_comments.id, comment_text, TO_CHAR(reg_date, 'yyyy-mm-dd') reg_date, name,member.id member_id, member_id member_num
+		FROM partner_comments join member ON (member_id = num)
+		WHERE write_id = #{id}
+	</select>
 	
 	<insert id="add">
-		INSERT INTO partner_comments (id, comment_text, reg_date, write_id, member_id)
-		VALUES (SEQ.PARTNER_COMMENTS_SEQ, #{commentText}, SYSDATE, #{writeId}, #{memberId})
+		INSERT INTO partner_comments (id,  reg_date, comment_text, write_id, member_id)
+		VALUES (PARTNER_COMMENTS_SEQ.NEXTVAL, TO_CHAR(SYSDATE, 'yyyy-mm-dd'), #{commentText}, #{writeId}, #{memberId})
 	</insert>
 	
+	<delete id="delete">
+		DELETE FROM partner_comments WHERE id = #{id}
+	</delete>
 </mapper>

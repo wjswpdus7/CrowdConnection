@@ -7,8 +7,8 @@
 	</select>
 	
 	<insert id="write">
-		INSERT INTO partner (id , title, sub_title, end_date, pub_date, partner_category, tel, mail, url, name, address)	
-		VALUES (PARTNER_SEQ.NEXTVAL, #{title}, #{subTitle}, #{endDate}, SYSDATE, #{partnerCategory}, #{tel}, #{mail}, #{url}, #{name}, #{address})
+		INSERT INTO partner (id , title, sub_title, end_date, pub_date, partner_category, tel, mail, url, name, address, member_id, contents)	
+		VALUES (PARTNER_SEQ.NEXTVAL, #{title}, #{subTitle}, #{endDate}, SYSDATE, #{partnerCategory}, #{tel}, #{mail}, #{url}, #{name}, #{address}, #{memberId}, #{contents})
 		
 		<selectKey resultType="int" keyProperty="id" order="AFTER">
     		SELECT MAX(id) FROM partner

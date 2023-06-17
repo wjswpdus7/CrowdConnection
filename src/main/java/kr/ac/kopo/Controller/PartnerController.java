@@ -24,6 +24,7 @@ import kr.ac.kopo.Service.CommentService;
 import kr.ac.kopo.Service.PartnerService;
 import kr.ac.kopo.model.Attach;
 import kr.ac.kopo.model.Comments;
+import kr.ac.kopo.model.Member;
 import kr.ac.kopo.model.Write;
 
 @Controller
@@ -59,7 +60,7 @@ public class PartnerController {
 	}
 	
 	@PostMapping("/write")
-	public String write(MultipartFile image1, List<MultipartFile> image2, Write item) {	
+	public String write(MultipartFile image1, List<MultipartFile> image2, Write item, HttpServletRequest request) {	
 		
 			if(!image1.isEmpty()) {
 				String filename = image1.getOriginalFilename();
@@ -105,7 +106,10 @@ public class PartnerController {
 				}			
 			}
 			item.setTopImage(topImages);
-		
+			
+			HttpSession session = request.getSession();
+			Member member =  (Member) session.getAttribute("member");
+			item.setMemberId(member.getNum());
 		
 		service.write(item);
 		
@@ -116,11 +120,14 @@ public class PartnerController {
 	public String detail(@PathVariable int id, Model model) {
 		Write item = service.item(id);
 		
+		List<Comments> comments = commentService.list(id);
+		
 		Attach thumbnail = attachService.thumbnail(id);
 		List<Attach> topImage = attachService.topImage(id);
 		List<Attach> attachs = attachService.attachs(id);
 		
 		model.addAttribute("item", item);
+		model.addAttribute("comments", comments);
 		model.addAttribute("thumbnail", thumbnail);
 		model.addAttribute("topImage", topImage);
 		model.addAttribute("attachs", attachs);
@@ -130,11 +137,19 @@ public class PartnerController {
 	
 	@PostMapping("/detail/{id}/comment_add")
 	public String commentAdd(@PathVariable int id, Comments item, HttpServletRequest request) {
-		item.setWriteId(id);
 		HttpSession session = request.getSession();
-		session.getAttribute(path)
+		Member member =  (Member) session.getAttribute("member");
+		item.setMemberNum(member.getNum());
+		item.setWriteId(id);
 		commentService.add(item);
 		
-		return "redirect:/";
+		return "redirect:.";
+	}
+	
+	@GetMapping("comment_delete?{id}")
+	public String commentDelete(@PathVariable int id) {
+		commentService.delete(id);
+		
+		return "redirect:..";
 	}
 }

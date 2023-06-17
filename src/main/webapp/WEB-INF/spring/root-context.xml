@@ -29,5 +29,7 @@
 		<property name="maxUploadSize" value="10485760"></property>		
 	</bean>
 	
-
+	<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl"> 
+	 	<property name="host" value="stmp 도메인 주소"/> 
+	</bean>
 </beans>
